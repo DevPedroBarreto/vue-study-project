@@ -40,7 +40,13 @@ Este exercício foi criado para praticar principalmente **computed properties** 
 - CSS
 
 ---
+## 🌐 Live Demo
 
+A aplicação está disponível online:
+
+🔗 https://vue-study-project-five.vercel.app/
+
+---
 ## 📈 Evolução do projeto
 
 A ideia deste projeto é que ele evolua conforme novos conhecimentos forem adquiridos.
