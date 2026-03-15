@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+
 # Vue Study Project
 
 Projeto desenvolvido para praticar e consolidar conhecimentos em Vue.js 3 através de exercícios práticos.
@@ -67,4 +69,4 @@ Este projeto foi criado com foco em:
 
 ## 👨‍💻 Autor
 
-Pedro Barreto
+# Pedro Barreto
