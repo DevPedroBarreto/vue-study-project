@@ -40,7 +40,7 @@ onMounted(async () => {
           <span>{{ produto.category }}</span>
         </div>
         <div class="card_prod-btn">
-          <a class="btn btn-primary" href="#">Add ao Carrinho </a>
+          <a class="btn btn-primary" href="#">Add ao Carrinho</a>
           <a class="btn btn-secondary" href="#">Comprar</a>
         </div>
       </div>

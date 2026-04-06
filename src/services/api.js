@@ -14,3 +14,18 @@ export async function getProdutos() {
     return [];
   }
 }
+
+export async function getCategorias() {
+  try {
+    const res = await fetch(`${BASE_URL}/products/categories`);
+
+    if (!res.ok) {
+      throw new Error("Erro ao buscar categorias");
+    }
+
+    return await res.json();
+  } catch (error) {
+    console.error("Erro na API:", error);
+    return [];
+  }
+}

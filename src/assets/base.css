@@ -72,7 +72,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.container-cards {
+  width: 80%;
+  float: right;
+}
 .btn {
   padding: 8px 24px;
   border: solid 1px #000;
@@ -96,7 +99,7 @@ body {
 }
 .grid-col-4 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 10px;
 }

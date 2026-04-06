@@ -11,10 +11,13 @@ import Aside from "./components/Aside.vue";
           <RouterLink to="/">Home</RouterLink>
           <RouterLink to="/about">About</RouterLink>
         </nav>
+        <div>
+          <Aside />
+        </div>
       </div>
     </header>
-    <Aside />
-    <section>
+    <section class="container-cards">
+      <h1>Bem-vindo à nossa loja online!</h1>
       <RouterView />
     </section>
   </main>
