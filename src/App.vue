@@ -1,6 +1,10 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
+
 import Aside from "./components/Aside.vue";
+
+import { ref } from "vue";
+
 </script>
 
 <template>
