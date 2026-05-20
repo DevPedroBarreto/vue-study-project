@@ -1,6 +1,7 @@
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, computed } from "vue";
 import { getProdutos } from "../services/api";
+import { selectedCategories } from "../services/store";
 
 const produtos = ref([]);
 const loading = ref(true);
@@ -17,6 +18,15 @@ onMounted(async () => {
     loading.value = false;
   }
 });
+
+const produtosFiltrados = computed(() => {
+  if (selectedCategories.value.length === 0) {
+    return produtos.value;
+  }
+  return produtos.value.filter((produto) =>
+    selectedCategories.value.includes(produto.category)
+  );
+});
 </script>
 <template>
   <h2>Produtos</h2>
@@ -25,7 +35,7 @@ onMounted(async () => {
 
   <div v-else>
     <div class="grid-col-4">
-      <div class="card_prod" v-for="produto in produtos" :key="produto.id">
+      <div class="card_prod" v-for="produto in produtosFiltrados" :key="produto.id">
         <div class="card_prod-img">
           <img
             :src="produto.image"

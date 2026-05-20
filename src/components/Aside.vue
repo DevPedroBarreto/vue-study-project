@@ -1,6 +1,7 @@
 <script setup>
 import { getCategorias } from "../services/api";
 import { ref, onMounted } from "vue";
+import { selectedCategories } from "../services/store";
 
 const categorias = ref([]);
 const loading = ref(true);
@@ -18,6 +19,9 @@ onMounted(async () => {
   }
 });
 
+const clearCategories = () => {
+  selectedCategories.value = [];
+};
 </script>
 <template>
   
@@ -27,12 +31,22 @@ onMounted(async () => {
     <nav v-else>
       <ul>
         <li>
-          <input type="checkbox" id="categoria-todas"/>
+          <input 
+            type="checkbox" 
+            id="categoria-todas"
+            :checked="selectedCategories.length === 0"
+            @change="clearCategories"
+          />
           <label for="categoria-todas">Todas</label>
         </li>
         <li v-for="categoria in categorias" :key="categoria">
-          <input type="checkbox" :id="`${categoria}`"/>
-          <label :for="`${categoria}`">
+          <input 
+            type="checkbox" 
+            :id="categoria" 
+            :value="categoria"
+            v-model="selectedCategories"
+          />
+          <label :for="categoria">
             {{ categoria }}
           </label>
         </li>
